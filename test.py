@@ -10,7 +10,7 @@ def firstStep():
     elm.click()
     
 for handle in driver.window_handles:
-    driver.switch_to_window(handle)
+    driver.switch_to.window
 
 def loginUser():
     text = driver.find_element_by_xpath("//*[@id='username']")
@@ -22,8 +22,7 @@ def loginUser():
     time.sleep(4)
     sendback = driver.find_element_by_xpath("/html/body/div[2]/div/div/a")
     sendback.click()
-    assert "You logged" in loginUser()
-
+    assert driver.page_source.find("You logged")
 
 
 
