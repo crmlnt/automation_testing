@@ -12,12 +12,12 @@ for handle in driver.window_handles:
 
 class testKeyPress():
 
-        def findLink():
+        def test_findLink():
             elm = driver.find_element_by_xpath("/html/body/div[2]/div/ul/li[31]/a")
             elm.click()
             time.sleep(2)
 
-        def keyPress():
+        def test_keyPress():
             keyOne = driver.find_element_by_xpath("//*[@id='target']")
             keyOne.send_keys("H")
             assert driver.page_source.find("H")
@@ -37,5 +37,5 @@ class testKeyPress():
 
 
 
-testKeyPress.findLink()
-testKeyPress.keyPress()
+testKeyPress.test_findLink()
+testKeyPress.test_keyPress()
